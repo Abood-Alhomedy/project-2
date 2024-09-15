@@ -1,0 +1,905 @@
+/* Fonts */
+:root {
+  --default-font: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Roboto", sans-serif;
+  --nav-font: "Poppins", sans-serif;
+}
+
+/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+:root {
+  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+  --default-color: #364d59; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #52565e; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #feb900; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+}
+
+/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+:root {
+  --nav-color: rgba(
+    255,
+    255,
+    255,
+    0.55
+  ); /* The default color of the main navmenu links */
+  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #feb900; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+}
+
+body {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-family: var(--default-font);
+}
+/* @media(max-width:1200px){
+  .container-md,
+  .container-sm,
+  .container {
+    max-width: 500px !important;
+  }
+
+} */
+@media (min-width: 768px) {
+  .container-md,
+  .container-sm,
+  .container {
+    max-width: 762px !important;
+  }
+}
+@media (min-width: 1200px) {
+  .container-md,
+  .container-sm,
+  .container {
+    max-width: 1190px !important;
+  }
+  .opc-img {
+    margin-left: 24% !important;
+  }
+}
+/* h2,h3,h4,h5{
+  font-size: 30px;
+  font-weight: 700;
+} */
+p {
+  font-size: 20px;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+.actives {
+  color: #feb900;
+  position: relative;
+}
+.actives::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  height: 2px;
+  background-color: #feb900;
+  left: 0;
+  bottom: 0;
+}
+.nav-item {
+  position: relative;
+}
+.nav-item:hover::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  height: 2px;
+  background-color: #feb900;
+  left: 0;
+  bottom: 0;
+}
+.navbar {
+  padding-top: 20px;
+  padding-top: 20px;
+  --bs-navbar-hover-color: rgb(191, 191, 191);
+  --bs-navbar-active-color: rgb(255, 255, 255);
+  --bs-navbar-color: rgb(236, 236, 236);
+}
+
+.padding-top-bootom {
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+
+.opc-carousel {
+  opacity: 1;
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+}
+.text-carousel {
+  position: relative;
+  top: 40%;
+  left: 37%;
+  color: white;
+  width: 30%;
+}
+.text-carousel h1 {
+  padding-bottom: 34px;
+  position: relative;
+}
+.h1-courser::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #feb900;
+  width: 100%;
+  height: 5px;
+}
+.btn-carousel {
+  background-color: rgba(1, 1, 1, 0);
+  color: white;
+  padding: 8px 32px;
+  border: 3px solid #feb900;
+  border-radius: 15%;
+  transition: 0.5s;
+}
+.btn-carousel:hover {
+  background-color: #feb900;
+}
+
+.navlinkclass {
+  color: rgb(255, 0, 0);
+}
+.Minus {
+  padding-top: 10%;
+}
+.Minus span {
+  position: relative;
+  bottom: 4px;
+  color: #feb900;
+  color: #feb900;
+  font-size: 11px;
+}
+.text-quote {
+  padding: 10px;
+}
+.text-quote input,
+textarea {
+  margin-bottom: 15px;
+}
+.login {
+  padding: 20px;
+  background-color: #f8f8f8;
+}
+.text-quote p {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.head-Constructions {
+  font-weight: bold;
+}
+.head-Constructions p {
+  padding-bottom: 30px;
+}
+.head-Constructions span {
+  color: #feb900;
+  position: relative;
+  bottom: 15px;
+}
+.Constructions {
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.con {
+  border: 1px solid rgb(223 223 223);
+}
+.con .text-Constructions {
+  float: inline-end;
+  padding-top: 10px;
+}
+
+.con img {
+  height: 270px;
+}
+
+.Services {
+  background-color: rgb(245 245 245);
+}
+.head-Services span {
+  color: #feb900;
+  position: relative;
+  bottom: 15px;
+}
+.head-Services p {
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.serv {
+  padding: 40px;
+  background-color: white;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 15px;
+}
+.serv svg {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+.serv h3 {
+  height: 32px;
+}
+
+.serv line {
+  position: relative;
+  bottom: 26px;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.serv:hover line,
+.serv:hover .read-more {
+  transition: 0.7s;
+  color: #feb900;
+}
+.serv:hover line::before {
+  content: "";
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  bottom: 61px;
+  right: 70px;
+  z-index: 0;
+  background-color: #feb900;
+  border-radius: 50px;
+  display: block;
+  transition: 0.5s;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.h3-alt {
+  position: relative;
+  margin-bottom: 34px;
+}
+.h3-alt::after {
+  content: "";
+  width: 82px;
+  height: 5px;
+  background-color: rgb(159, 27, 0);
+  position: absolute;
+  left: 0;
+  bottom: -21px;
+}
+.body-alt-Services {
+  padding-top: 50px;
+}
+
+.body-alt-Services .text-alt {
+  padding-top: 20px;
+  display: -webkit-inline-box;
+  cursor: pointer;
+}
+
+.text-alt .icon-alt {
+  background-color: rgb(0 0 0 / 5%);
+  height: 56px;
+  width: 56px;
+  transition: 0.5s;
+}
+.text-alt a {
+  transition: 0.5s;
+}
+.icon-alt .icon {
+  position: relative;
+  top: 7px;
+  left: 8px;
+  color: #feb900;
+  font-size: 40px;
+}
+.text-alt a {
+  color: black;
+}
+.text-alt:hover .icon-alt .icon {
+  color: white;
+}
+.text-alt:hover .icon-alt {
+  background-color: #feb900;
+}
+.text-alt:hover a {
+  color: #feb900;
+}
+
+.fea {
+  position: relative;
+  cursor: pointer;
+}
+.fea a {
+  text-decoration: none;
+  color: var(--heading-color);
+}
+.h5-fea::after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 95%;
+  top: 32px;
+  left: 0;
+  background-color: #ebebeb;
+}
+
+.clicked .h5-fea::after {
+  background-color: #feb900;
+}
+
+.body-fea p::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 4px;
+  top: 10px;
+  left: 0;
+  background-color: #feb900;
+}
+.body-fea p {
+  padding-top: 30px;
+
+  position: relative;
+}
+
+.body-fea ul li {
+  list-style: none;
+  padding-top: 19px;
+  font-weight: 500;
+}
+
+.image-fea img {
+  padding-top: 50px;
+  width: 100%;
+  height: 100%;
+}
+.all-fea {
+  display: contents;
+}
+.all-fea2 {
+  display: none;
+}
+.all-fea3 {
+  display: none;
+}
+.all-fea4 {
+  display: none;
+}
+
+.head-proj {
+  padding-bottom: 50px;
+}
+.head-proj span {
+  color: #feb900;
+  position: relative;
+  bottom: 15px;
+}
+.choose-proj ul li {
+  display: inline-block;
+  width: auto;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.act-proj {
+  color: #feb900;
+}
+.all-proj {
+  padding-top: 20px;
+}
+
+.all-proj .row {
+  position: relative;
+}
+
+.img1 {
+  position: relative;
+  padding-bottom: 10px;
+}
+.opc {
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+}
+.img1 img {
+  width: 100%;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.opc h4 {
+  background-color: rgb(245, 145, 46);
+  width: max-content;
+  color: white;
+}
+.opc p {
+  position: absolute;
+  color: #ebebeb;
+  bottom: 0;
+}
+.opc:hover {
+  opacity: 1;
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  transition: 0.8s;
+}
+.img1:hover img {
+  transform: scale(1, 1);
+}
+.opc .icon-link {
+  position: absolute;
+  left: 60%;
+  color: white;
+  top: 50%;
+  font-weight: bold;
+  font-size: 30px;
+}
+.opc .icon-search {
+  position: absolute;
+  left: 40%;
+  color: white;
+  top: 48%;
+  font-weight: bold;
+  font-size: 30px;
+}
+.opc a:hover {
+  color: rgb(199, 149, 55);
+}
+.Remodeling {
+  display: none;
+}
+.Construction {
+  display: none;
+}
+.Repairs {
+  display: none;
+}
+.Design {
+  display: none;
+}
+.show-proj {
+  display: contents !important;
+}
+.active-proj li {
+  transition: 0.5s;
+  font-size: 20px;
+}
+.active-proj li:hover {
+  color: #feb900;
+}
+
+.card {
+  width: 40%;
+  display: inline-block;
+  margin-left: 94px;
+  padding: 20px;
+  border: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.card-img,
+.card-img-top {
+  position: absolute;
+  left: -36px;
+  top: 35px;
+  width: 16%;
+}
+
+.card-body {
+  position: relative;
+  margin-left: 31px;
+}
+.card-p {
+  font-size: 15px;
+  color: darkgray;
+  margin-bottom: 1px;
+}
+.card-text {
+  font-style: italic;
+}
+.card-text svg {
+  color: #feb900;
+  font-size: 20px;
+}
+.stars {
+  color: #feb900;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.recent {
+  position: relative;
+}
+.sec {
+  position: relative;
+}
+.img-recent {
+  overflow: hidden;
+}
+.sec img {
+  width: 100%;
+  transition: 0.5s;
+}
+.text-recent {
+  background-color: white;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 25px;
+}
+.text-recent h5 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.text-recent p {
+  padding-bottom: 10px;
+}
+.text-recent svg {
+  color: #feb900;
+}
+.text-recent span {
+  color: var(--default-color);
+}
+.read-recent {
+  text-decoration: none;
+  color: var(--default-color);
+}
+.read-recent svg {
+  color: var(--default-color);
+}
+.read-recent::after {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  content: "";
+}
+.sec:hover img {
+  transform: scale(1.1);
+}
+.sec:hover h5,
+.sec:hover .read-recent,
+.sec:hover .read-recent svg {
+  color: #feb900;
+  transition: 0.5s;
+}
+.carousel-indicators {
+  bottom: -60px;
+}
+.carousel-indicators [data-bs-target] {
+  background-color: #feb900;
+}
+
+.footer {
+  position: relative;
+  background-image: url(../../img/footer-bg.jpg);
+  padding-top: 80px;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.footer .container {
+  position: relative;
+}
+.footer .row {
+  padding-bottom: 20px;
+}
+.footer hr {
+  color: white;
+}
+.footer a {
+  color: #9ca2ad;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.footer a:hover {
+  color: #feb900;
+}
+.phone-email h2 {
+  margin-bottom: 30px;
+  color: white;
+}
+.phone-email a {
+  text-decoration: none;
+}
+
+.phone-email p {
+  color: white;
+  font-size: 14px;
+}
+.phone-email strong {
+  margin-top: 10px;
+}
+.icons svg {
+  border: 1px solid rgb(241, 241, 241);
+  border-radius: 3px;
+  color: rgb(241, 241, 241);
+  padding: 7px;
+  transition: 0.8s;
+  font-size: 21px;
+}
+.icons svg:hover {
+  color: #feb900;
+  border: 1px solid #feb900;
+}
+.links-footer h5 {
+  color: white;
+  font-size: 16px;
+}
+.links-footer {
+  margin-top: 20px;
+}
+.links-footer li {
+  margin-top: 10px;
+}
+.footer .copy-right {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  color: white;
+}
+.copy-right p {
+  font-size: 16px;
+}
+.footer .bootst {
+  font-size: 14px;
+}
+.footer .bootst a {
+  color: #feb900;
+}
+.footer .bootst a:hover {
+  color: #b88700;
+}
+
+/*About*/
+.page-tittle {
+  background-image: url(../../img/page-title-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 160px 0 160px 0;
+  position: relative;
+  background-position: center;
+}
+.page-tittle .container {
+  position: relative;
+}
+.page-tittle::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  inset: 0;
+}
+.page-tittle .text-page ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+.page-tittle h1 {
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.page-tittle .text-page ol .about-nav {
+  color: white;
+}
+.page-tittle .text-page ol a {
+  color: #feb900;
+}
+.page-tittle .text-page ol a:hover {
+  color: #b88700;
+}
+
+.Our-Story .row {
+  position: relative;
+}
+.Our-Story .story-img img {
+  position: relative;
+  width: 116%;
+  height: 85%;
+  display: block;
+  object-fit: cover;
+  /* object-position: center; */
+  right: 56px;
+}
+.Our-Story h1 {
+  margin-bottom: 80px;
+}
+.div-story {
+  background-color: rgb(245 245 245);
+
+  padding: 40px;
+}
+.div-story p {
+  font-size: 17px;
+}
+.div-story li {
+  margin-top: 10px;
+}
+.div-story svg {
+  color: #feb900;
+  border: 1px solid #feb900;
+  border-radius: 50%;
+  padding: 2px;
+}
+/* .statw-item::before{
+  content: "";
+} */
+
+.state-item {
+  background-color: white;
+  box-shadow: 2px 2px 10px;
+  padding: 20px;
+}
+.state-item svg {
+  color: var(--accent-color);
+  font-size: 42px;
+  line-height: 0;
+  margin-right: 20px;
+  margin-bottom: 13px;
+}
+/* .state-item svg::before{
+content: "\f327";
+} */
+.text-state {
+  display: inline-block;
+}
+.state-item path {
+  margin-top: 10px;
+}
+
+.text-state span {
+  color: var(--heading-color);
+  font-size: 36px;
+  font-weight: 600;
+}
+.text-state p {
+  padding: 0;
+  font-family: var(--heading-font);
+  font-size: 16px;
+}
+
+.head-servise2 h1 {
+  margin-bottom: 20px;
+}
+.head-servise2 p {
+  margin-bottom: 20px;
+}
+.alt-item {
+  margin-top: 30px;
+}
+.alt-item svg {
+  margin-bottom: 45px;
+  margin-right: 10px;
+  color: #feb900;
+}
+.text-servise2 {
+  display: inline-block;
+  width: 83%;
+}
+.alt-services2 img {
+  width: 100%;
+  height: 100%;
+}
+
+.head-team span {
+  color: #feb900;
+  position: relative;
+  bottom: 15px;
+}
+.opc-img {
+  position: relative;
+  width: 186px;
+  height: 186px;
+  margin-left: 39%;
+}
+.team-item img {
+  width: 100%;
+  border: 1px solid;
+  border-radius: 50%;
+}
+.team-item {
+  margin-top: 40px;
+}
+.opc-team {
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  background: rgba(0, 0, 0, 0.6);
+}
+.team-item:hover .opc-team {
+  opacity: 1;
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  background: rgba(0, 0, 0, 0.6);
+  transition: 0.8s;
+  border: 1px solid;
+  border-radius: 50%;
+}
+
+.team-item span {
+  font-style: italic;
+  display: block;
+  font-size: 15px;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  margin-bottom: 10px;
+}
+.text-team {
+  margin-top: 20px;
+}
+.text-team p {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+.opc-team svg {
+  color: white;
+  position: relative;
+  top: 80px;
+  margin-right: 5px;
+  transition: 0.5s;
+}
+.opc-team svg:hover {
+  color: #feb900;
+}
+
+.feature-item h3 {
+  font-size: 20px;
+  font-weight: 700;
+}
+.feature-item p {
+  font-size: 15px;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+.feature-item span {
+  font-size: 15px;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+.feature-item .list {
+  margin-top: 20px;
+  padding: 0;
+}
+.feature-item li {
+  margin-top: 10px;
+}
+.feature-item svg {
+  color: #feb900;
+}
